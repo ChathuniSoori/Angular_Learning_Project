@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { mammals } from '../data/mammels-data'
 import { mammal } from '../models/mammels.model';
+
 
 @Component({
   selector: 'app-animal-kingdom',
@@ -11,11 +12,19 @@ import { mammal } from '../models/mammels.model';
 export class AnimalKingdom implements OnInit {
 
   @Input()
-  mammal?: mammal;
+  newMammal?: mammal;
+
+  @Output()
+  newEventForMammal = new EventEmitter(); 
   
   constructor(){}
 
-  ngOnInit() {
-      
+  buttonActionSelected(){
+    console.log("button clicked");
+    this.newEventForMammal.emit(this.newMammal)
   }
+  ngOnInit() {
+   
+  }
+
 }

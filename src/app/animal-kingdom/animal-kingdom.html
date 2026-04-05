@@ -1,15 +1,18 @@
-@if (mammal) {
+@if (newMammal) {
     <div class="mammals">
-        @if (mammal.title){
+        @if (newMammal.title){
             <div class="mammal-title">
-            <h2> {{ mammal.title }} </h2>
+            <h2> {{ newMammal.title }} </h2>
             </div>
         }
-        @if (mammal.photo){
-        <img class="mammal-photo" alt="Mammal photo" [src]="mammal.photo">
+        @if (newMammal.photo){
+        <img class="mammal-photo" alt="Mammal photo" [src]="newMammal.photo">
         }
         <div class="mammal-description">
-            {{ mammal.description }}
+            {{ newMammal.description }}
+        </div>
+        <div class="mammal-button">
+            <button (click) = "buttonActionSelected()" >Click</button>
         </div>
     </div>
 }

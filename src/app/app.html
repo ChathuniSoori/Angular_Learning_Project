@@ -1,5 +1,7 @@
 <h1>Welcome to Animal Kingdom</h1>
-<app-animal-kingdom (newEventForMammal)="buttonActionView($event)" [newMammal]="mammalData"></app-animal-kingdom>
-<app-animal-kingdom (newEventForMammal)="buttonActionView($event)" [newMammal]="mammalEveryWhereData"></app-animal-kingdom>
+
+@for (newMammalItem of mammalsData; track newMammalItem.id) {
+  <app-animal-kingdom (newEventForMammal)="buttonActionView($event)" [newMammal]="newMammalItem"/>
+} 
 
 <router-outlet />

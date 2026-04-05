@@ -13,8 +13,8 @@ import { mammal } from './models/mammels.model';
 })
 export class App {
   protected readonly title = signal('AngularPractice');
-  mammalData = mammals[0];
-  mammalEveryWhereData =mammals[1];
+
+  mammalsData = mammals;
   
   buttonActionView(newMammalView: mammal){
     console.log(newMammalView.description)

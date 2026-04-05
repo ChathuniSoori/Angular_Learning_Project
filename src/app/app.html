@@ -1,7 +1,10 @@
 <h1>Welcome to Animal Kingdom</h1>
 
-@for (newMammalItem of mammalsData; track newMammalItem.id) {
-  <app-animal-kingdom (newEventForMammal)="buttonActionView($event)" [newMammal]="newMammalItem"/>
+@for (newMammalItem of mammalsData; track newMammalItem.id; let even = $even) {
+  <app-animal-kingdom 
+  (newEventForMammal)="buttonActionView($event)" 
+  [newMammal]="newMammalItem" 
+  [class.is-even]=$even/>
 } 
 
 <router-outlet />

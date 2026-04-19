@@ -1,13 +1,16 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+</style>
 @if (newMammal) {
 <div class="mammal-card"
-[ngClass]="cardClasses()">
-      <div class="mammal-title">
+>
+      <div class="mammal-title" [ngClass]="cardClasses()" >
         <h2>{{ newMammal.title }}</h2>
       </div>
     
       <img class="mammal-photo" alt="Mammal photo" [src]="newMammal.photo" />
     
-    <div class="mammal-description">
+    <div class="mammal-description" [ngStyle]="cardStyles()">
       {{ newMammal.description }}
     </div>
     

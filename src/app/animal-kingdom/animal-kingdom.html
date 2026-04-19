@@ -5,7 +5,7 @@
 <div class="mammal-card"
 >
       <div class="mammal-title" [ngClass]="cardClasses()" >
-        <h2>{{ newMammal.title }}</h2>
+        <h2>{{ newMammal.title | titlecase }}</h2>
       </div>
     
       <img class="mammal-photo" alt="Mammal photo" [src]="newMammal.photo" />

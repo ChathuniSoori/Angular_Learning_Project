@@ -17,5 +17,28 @@
     <div class="mammal-button">
       <button (click)="buttonActionSelected()">Click</button>
     </div>
+
+    <div class="mammal-category" >
+        @switch(newMammal.category){
+            @case ("MAMMELS"){
+            <div class="category" >Mammals</div>
+            }
+            @case ("SMALLMAMMELS"){
+            <div class="category" >Small Mammals</div>
+            }
+            @case ("GNAWINGMAMMELS"){
+            <div class="category" >Gnawing Mammals</div>
+            }
+            @case ("FLEXIBLYFINGEREDMAMMEL"){
+            <div class="category" >Flexibly Fingered Mammals</div>
+            }
+            @case ("INSECTEATINGMAMMEL"){
+            <div class="category" >Insect Eating Mammals</div>
+            }
+            @default{
+                <div class="category">Large Mammals</div>
+            }
+        }
+    </div>
   </div>
 }

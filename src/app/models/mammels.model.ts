@@ -4,4 +4,5 @@ export interface mammal{
     subtitle?:string;
     photo?:string;
     description? : string;
+    category?: string;
 }

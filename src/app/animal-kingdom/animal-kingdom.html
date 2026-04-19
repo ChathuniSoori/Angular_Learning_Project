@@ -1,18 +1,18 @@
 @if (newMammal) {
-    <div class="mammals">
-        @if (newMammal.title){
-            <div class="mammal-title">
-            <h2> {{ newMammal.title }} </h2>
-            </div>
-        }
-        @if (newMammal.photo){
-        <img class="mammal-photo" alt="Mammal photo" [src]="newMammal.photo">
-        }
-        <div class="mammal-description">
-            {{ newMammal.description }}
-        </div>
-        <div class="mammal-button">
-            <button (click) = "buttonActionSelected()" >Click</button>
-        </div>
+<div class="mammal-card"
+[ngClass]="cardClasses()">
+      <div class="mammal-title">
+        <h2>{{ newMammal.title }}</h2>
+      </div>
+    
+      <img class="mammal-photo" alt="Mammal photo" [src]="newMammal.photo" />
+    
+    <div class="mammal-description">
+      {{ newMammal.description }}
     </div>
+    
+    <div class="mammal-button">
+      <button (click)="buttonActionSelected()">Click</button>
+    </div>
+  </div>
 }
